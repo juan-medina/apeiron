@@ -22,11 +22,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ****************************************************************************/
 
-#pragma once
+#include <apeiron/application/application.hpp>
+#include <apeiron/platform/version.hpp>
 
-// ReSharper disable CppUnusedIncludeDirective
-#include "platform/version.hpp"
+#include <iostream>
 
 namespace apeiron {
-    void hello();
+auto application::run() -> std::expected<void, bool> {
+    std::cout << version::logo_string << '\n';
+    return {};
 }
+} // namespace apeiron

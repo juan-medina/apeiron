@@ -24,17 +24,17 @@ SOFTWARE.
 
 #pragma once
 
-#include <string>
 #include <format>
+#include <string>
 
 namespace apeiron::version {
-    static constexpr int major = 0;
-    static constexpr int minor = 0;
-    static constexpr int release = 0;
+static constexpr int major = 0;
+static constexpr int minor = 0;
+static constexpr int release = 0;
 
-    static const std::string string = std::format("v{}.{}.{}", major, minor, release);
+static const std::string string = std::format("v{}.{}.{}", major, minor, release);
 
-    static constexpr auto logo = R"(       d8888                   d8b
+static constexpr auto logo = R"(       d8888                   d8b
       d88888                   Y8P
      d88P888
     d88P 888 88888b.   .d88b.  888 888d888 .d88b.  88888b.
@@ -46,5 +46,5 @@ d88P     888 88888P"   "Y8888  888 888     "Y88P"  888  888
              888
              888                            version {:1}.{:02}.{:02})";
 
-    static const auto logo_string = std::format(logo, major, minor, release);
-}  // namespace apeiron::version
+static const auto logo_string = std::format(logo, major, minor, release);
+} // namespace apeiron::version

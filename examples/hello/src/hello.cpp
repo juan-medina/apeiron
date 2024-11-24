@@ -22,11 +22,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ****************************************************************************/
 
-#include <cstdlib>
+#include <apeiron/apeiron.hpp>
 
-#include <apeiron/apeiron.h>
+#include <cstdlib>
+#include <iostream>
 
 auto main(int /*argc*/, char * /*argv*/[]) -> int {
-    apeiron::hello();
+    if(auto result = apeiron::application{}.run(); !result) {
+        std::cout << "Error running the application: " << result.error() << '\n';
+        return EXIT_FAILURE;
+    }
     return EXIT_SUCCESS;
 }

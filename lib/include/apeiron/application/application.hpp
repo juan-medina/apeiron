@@ -22,6 +22,25 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ****************************************************************************/
 
-#include "apeiron/apeiron.hpp"
+#pragma once
 
-namespace apeiron {}
+#include <expected>
+
+namespace apeiron {
+class application {
+public:
+    explicit application() = default;
+
+    ~application() = default;
+
+    application(const application &other) = default;
+
+    application(application &&other) noexcept = default;
+
+    auto operator=(const application &other) -> application & = default;
+
+    auto operator=(application &&other) noexcept -> application & = default;
+
+    auto run() -> std::expected<void, bool>;
+};
+} // namespace apeiron

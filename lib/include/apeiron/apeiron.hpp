@@ -22,6 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ****************************************************************************/
 
-#include "apeiron/apeiron.hpp"
+#pragma once
+
+// ReSharper disable CppUnusedIncludeDirective
+#include "application/application.hpp"
+#include "platform/version.hpp"
 
 namespace apeiron {}
