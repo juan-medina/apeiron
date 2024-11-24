@@ -1,0 +1,1 @@
+option(BUILD_APEIRON_EXAMPLES "Build Apeiron examples." OFF)
